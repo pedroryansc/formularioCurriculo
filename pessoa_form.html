@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action="pessoa_acao.php" method="post">
+        <h2>Dados Pessoais</h2>
+        <label for="txt_nome">Nome:</label>
+        <input type="text" id="txt_nome" name="nome"/>
+        <br>
+        <br>
+        <label for="txt_idade">Idade:</label>
+        <input type="text" id="txt_idade" name="idade"/>
+        <br>
+        <br>
+        <h2>Endereço Pessoal</h2>
+        <label for="logradouroPes">Logradouro:</label>
+        <input type="text" id="logradouroPes" name="logradouroPes"/>
+        <br>
+        <br>
+        <label for="numeroPes">Número:</label>
+        <input type="text" id="numeroPes" name="numeroPes"/>
+        <br>
+        <br>
+        <label for="bairroPes">Bairro:</label>
+        <input type="text" id="bairroPes" name="bairroPes"/>
+        <br>
+        <br>
+        <label for="cidadePes">Cidade:</label>
+        <input type="text" id="cidadePes" name="cidadePes">
+        <br>
+        <br>
+        <label for="estadoPes">Estado:</label>
+        <input type="text" id="estadoPes" name="estadoPes">
+        <br>
+        <br>
+        <h2>Documentos</h2>
+        <label for="rg">RG:</label>
+        <input type="text" name="rg" id="rg">
+        <label for="orgao">Órgão:</label>
+        <input type="text" name="orgao" id="orgao">
+        <label for="data">Data:</label>
+        <input type="date" name="data" id="data">
+        <label for="uf">UF (Unidade Federativa):</label>
+        <input type="text" name="uf" id="uf">
+        <br>
+        <br>
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf">
+        <br>
+        <br>
+        <label for="passaporte">Passaporte:</label>
+        <input type="text" name="passaporte" id="passaporte">
+        <br>
+        <br>
+        <label for="pispasep">PIS/PASEP:</label>
+        <input type="text" name="pispasep" id="pispasep">
+        <br>
+        <br>
+        <h2>Endereço Comercial</h2>
+        <label for="logradouroCom">Logradouro:</label>
+        <input type="text" id="logradouroCom" name="logradouroCom"/>
+        <br>
+        <br>
+        <label for="numeroCom">Número:</label>
+        <input type="text" id="numeroCom" name="numeroCom"/>
+        <br>
+        <br>
+        <label for="bairroCom">Bairro:</label>
+        <input type="text" id="bairroCom" name="bairroCom"/>
+        <br>
+        <br>
+        <label for="cidadeCom">Cidade:</label>
+        <input type="text" id="cidadeCom" name="cidadeCom">
+        <br>
+        <br>
+        <label for="estadoCom">Estado:</label>
+        <input type="text" id="estadoCom" name="estadoCom">
+        <br>
+        <br>
+        <br>
+        <label for="txa_infocomplementar">Informação Complementar:</label>
+        <br>
+        <br>
+        <textarea name="infocomplementar" id="txa_infocomplmenetar" cols="30" rows="10"></textarea>
+        <br>
+        <br>
+        <input type="submit" value="Salvar"/>
+        <input type="reset" value="Limpar"/>
+    </form>
+</body>
+</html>
