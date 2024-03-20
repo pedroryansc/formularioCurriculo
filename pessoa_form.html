@@ -6,90 +6,234 @@
     <title>Formulário</title>
 </head>
 <body>
-    <form action="pessoa_acao.php" method="post">
-        <h2>Dados Pessoais</h2>
-        <label for="txt_nome">Nome:</label>
-        <input type="text" id="txt_nome" name="nome"/>
-        <br>
-        <br>
-        <label for="txt_idade">Idade:</label>
-        <input type="text" id="txt_idade" name="idade"/>
-        <br>
-        <br>
-        <h2>Endereço Pessoal</h2>
-        <label for="logradouroPes">Logradouro:</label>
-        <input type="text" id="logradouroPes" name="logradouroPes"/>
-        <br>
-        <br>
-        <label for="numeroPes">Número:</label>
-        <input type="text" id="numeroPes" name="numeroPes"/>
-        <br>
-        <br>
-        <label for="bairroPes">Bairro:</label>
-        <input type="text" id="bairroPes" name="bairroPes"/>
-        <br>
-        <br>
-        <label for="cidadePes">Cidade:</label>
-        <input type="text" id="cidadePes" name="cidadePes">
-        <br>
-        <br>
-        <label for="estadoPes">Estado:</label>
-        <input type="text" id="estadoPes" name="estadoPes">
-        <br>
-        <br>
-        <h2>Documentos</h2>
-        <label for="rg">RG:</label>
-        <input type="text" name="rg" id="rg">
-        <label for="orgao">Órgão:</label>
-        <input type="text" name="orgao" id="orgao">
-        <label for="data">Data:</label>
-        <input type="date" name="data" id="data">
-        <label for="uf">UF (Unidade Federativa):</label>
-        <input type="text" name="uf" id="uf">
-        <br>
-        <br>
-        <label for="cpf">CPF:</label>
-        <input type="text" name="cpf" id="cpf">
-        <br>
-        <br>
-        <label for="passaporte">Passaporte:</label>
-        <input type="text" name="passaporte" id="passaporte">
-        <br>
-        <br>
-        <label for="pispasep">PIS/PASEP:</label>
-        <input type="text" name="pispasep" id="pispasep">
-        <br>
-        <br>
-        <h2>Endereço Comercial</h2>
-        <label for="logradouroCom">Logradouro:</label>
-        <input type="text" id="logradouroCom" name="logradouroCom"/>
-        <br>
-        <br>
-        <label for="numeroCom">Número:</label>
-        <input type="text" id="numeroCom" name="numeroCom"/>
-        <br>
-        <br>
-        <label for="bairroCom">Bairro:</label>
-        <input type="text" id="bairroCom" name="bairroCom"/>
-        <br>
-        <br>
-        <label for="cidadeCom">Cidade:</label>
-        <input type="text" id="cidadeCom" name="cidadeCom">
-        <br>
-        <br>
-        <label for="estadoCom">Estado:</label>
-        <input type="text" id="estadoCom" name="estadoCom">
-        <br>
-        <br>
-        <br>
-        <label for="txa_infocomplementar">Informação Complementar:</label>
-        <br>
-        <br>
-        <textarea name="infocomplementar" id="txa_infocomplmenetar" cols="30" rows="10"></textarea>
-        <br>
-        <br>
-        <input type="submit" value="Salvar"/>
-        <input type="reset" value="Limpar"/>
-    </form>
+    <section name="formulario" id="formulario">
+        <h1>Formulário de Currículo</h1>
+        <form action="pessoa_acao.php" method="post">
+            <fieldset>
+                <legend><h2>Dados Pessoais</h2></legend>
+                <label for="txt_nome">Nome:</label>
+                <input type="text" id="txt_nome" name="nome" placeholder="Digite seu nome"/>
+                <br>
+                <br>
+                <label for="txt_idade">Idade:</label>
+                <input type="text" id="txt_idade" name="idade" placeholder="Digite sua idade" maxlength="3"/>
+                <br>
+                <br>
+                <label for="naturalidade">Naturalidade:</label>
+                <input type="text" name="naturalidade" id="naturalidade" placeholder="Digite sua naturalidade">
+                <br>
+                <br>
+                <label for="dataNasc">Data de Nascimento:</label>
+                <input type="date" name="dataNasc" id="dataNasc">
+                <br>
+                <br>
+                <label for="nomeSocial">Nome Social:</label>
+                <input type="text" name="nomeSocial" id="nomeSocial" placeholder="Digite seu nome social">
+                <br>
+                <br>
+                <label for="genero">Gênero:</label>
+                <br>
+                <input type="radio" name="genero" id="genero" value="F">Feminino
+                <br>
+                <input type="radio" name="genero" id="genero" value="M">Masculino
+                <br>
+                <br>
+                <label for="escolaridade">Escolaridade:</label>
+                <select name="escolaridade" id="escolaridade">
+                    <option>Escolha a escolaridade</option>
+                    <option value="fundInc">Ensino Fundamental incompleto</option>
+                    <option value="fundCom">Ensino Fundamental completo</option>
+                    <option value="medioInc">Ensino Médio incompleto</option>
+                    <option value="medioCom">Ensino Médio completo</option>
+                    <option value="supInc">Ensino Superior incompleto</option>
+                    <option value="supCom">Ensino Superior completo</option>
+                </select>
+                <br>
+                <br>
+                <label for="filhos">Tem filho(s)?</label>
+                <br>
+                <input type="radio" name="filhos" id="filhos" value="1">Sim
+                <br>
+                <input type="radio" name="filhos" id="filhos" value="0">Não
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><h2>Endereço Pessoal</h2></legend>
+                <label for="logradouroPes">Logradouro:</label>
+                <input type="text" id="logradouroPes" name="logradouroPes" placeholder="Logradouro pessoal"/>
+                <br>
+                <br>
+                <label for="numeroPes">Número:</label>
+                <input type="text" id="numeroPes" name="numeroPes" placeholder="Número de sua residência"/>
+                <br>
+                <br>
+                <label for="bairroPes">Bairro:</label>
+                <input type="text" id="bairroPes" name="bairroPes" placeholder="Bairro de sua residência"/>
+                <br>
+                <br>
+                <label for="cidadePes">Cidade:</label>
+                <input type="text" id="cidadePes" name="cidadePes" placeholder="Cidade de sua residência">
+                <label for="estadoPes">Estado:</label>
+                <select name="estadoPes" id="estadoPes">
+                    <option>Escolha o estado ou Distrito Federal</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+                <br>
+                <br>
+                <label for="cepRes">CEP</label>
+                <input type="text" name="cepRes" id="cepRes" placeholder="00000-000" pattern="[0-9]{5}-[0-9]{3}" maxlength="9">
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><h2>Documentos</h2></legend>
+                <label for="rg">RG:</label>
+                <input type="text" name="rg" id="rg" placeholder="Digite seu RG" maxlength="14">
+                <label for="orgao">Órgão:</label>
+                <input type="text" name="orgao" id="orgao" placeholder="Órgão emissor">
+                <label for="data">Data de Emissão:</label>
+                <input type="date" name="data" id="data">
+                <label for="uf">UF (Unidade Federativa):</label>
+                <select name="uf" id="uf">
+                    <option>Escolha a UF</option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                </select>
+                <br>
+                <br>
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" maxlength="14">
+                <br>
+                <br>
+                <label for="passaporte">Passaporte:</label>
+                <input type="text" name="passaporte" id="passaporte" placeholder="Série do passaporte" maxlength="8">
+                <br>
+                <br>
+                <label for="pispasep">PIS/PASEP:</label>
+                <input type="text" name="pispasep" id="pispasep" placeholder="Código do PIS/PASEP">
+                <br>
+                <br>
+                <label for="eleitor">Título de Eleitor:</label>
+                <input type="text" name="eleitor" id="eleitor" placeholder="Número de seu título" pattern="[0-9]{12}" maxlength="12">
+                <br>
+                <br>
+                <label for="certMilitar">Certificado de Reservista/Dispensa Militar:</label>
+                <input type="text" name="certMilitar" id="certMilitar" placeholder="00.000.000000.0" pattern="[0-9]{2}.[0-9]{3}.[0-9]{6}.[0-9]{1}" maxlength="15">
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><h2>Endereço Comercial</h2></legend>
+                <label for="logradouroCom">Logradouro:</label>
+                <input type="text" id="logradouroCom" name="logradouroCom" placeholder="Digite o logradouro"/>
+                <br>
+                <br>
+                <label for="numeroCom">Número:</label>
+                <input type="text" id="numeroCom" name="numeroCom" placeholder="Digite o número"/>
+                <br>
+                <br>
+                <label for="bairroCom">Bairro:</label>
+                <input type="text" id="bairroCom" name="bairroCom" placeholder="Digite o bairro"/>
+                <br>
+                <br>
+                <label for="cidadeCom">Cidade:</label>
+                <input type="text" id="cidadeCom" name="cidadeCom" placeholder="Digite a cidade">
+                <label for="estadoCom">Estado:</label>
+                <select name="estadoCom" id="estadoCom">
+                    <option>Escolha o estado ou Distrito Federal</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+                <br>
+                <br>
+                <label for="cepCom">CEP</label>
+                <input type="text" name="cepCom" id="cepCom" placeholder="00000-000" pattern="[0-9]{5}-[0-9]{3}" maxlength="9">
+            </fieldset>
+            <br>
+            <br>
+            <fieldset>
+                <legend><label for="txa_infocomplementar"><h3>Informação Complementar</h3></label></legend>
+                <textarea name="infocomplementar" id="txa_infocomplementar" cols="30" rows="10" placeholder="Informações para adicionar"></textarea>
+            </fieldset>
+            <br>
+            <br>
+            <input type="submit" value="Salvar"/>
+            <input type="reset" value="Limpar"/>
+        </form>
+    </section>
 </body>
 </html>
